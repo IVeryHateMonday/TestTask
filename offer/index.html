@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            var speedtext = 30; // скорость чата
+        </script>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Sophia Müller - Konsultim falas</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin=""
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/intlTelInput.css" />
+        <link rel="stylesheet" href="css/spin.css" />
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            var locale = 'de';
+            var days = [
+                'Sonntag',
+                'Montag',
+                'Dienstag',
+                'Mittwoch',
+                'Donnerstag',
+                'Freitag',
+                'Samstag',
+            ];
+            var months = [
+                'Januar',
+                'Februar',
+                'März',
+                'April',
+                'Mai',
+                'Juni',
+                'Juli',
+                'August',
+                'September',
+                'Oktober',
+                'November',
+                'Dezember',
+            ];
+            function dtimes(e) {
+                var t = new Date();
+                t.setDate(t.getDate() + e + 1 - 1),
+                    document.write(t.getDate() + ' ' + months[t.getMonth()]);
+            }
+            function dtime(e) {
+                var t = new Date();
+                t.setDate(t.getDate() + e),
+                    document.write(
+                        days[t.getDay()] +
+                            ' ' +
+                            t.getDate() +
+                            ',  ' +
+                            months[t.getMonth()] +
+                            ' ' +
+                            t.getFullYear()
+                    );
+            }
+            function dtime_nums(e, t, a) {
+                var n = new Date();
+                n.setDate(n.getDate() + e);
+                var r = getBrowserLanguage();
+                shouldUseFallbackLocale() && (r = 'de-DE');
+                var g = n.toLocaleDateString(r);
+                if (a) return g;
+                document.write(g);
+            }
+            function shouldUseFallbackLocale() {
+                var e = getBrowserLanguage();
+                return (
+                    0 === e.indexOf('ar') ||
+                    0 === e.indexOf('fa') ||
+                    0 === e.indexOf('bg') ||
+                    0 === e.indexOf('en-US')
+                );
+            }
+            function getBrowserLanguage() {
+                return navigator.language || navigator.userLanguage;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="main-desc b-show">
+            <div class="main-desc__img"></div>
+            <div class="main-desc__body">
+                <div class="main__title">
+                    <p>Sitio web oficial</p>
+                </div>
+                <div class="main__name">
+                    <p>Sophia Müller</p>
+                </div>
+            </div>
+        </div>
+        <div class="body" style="transform: translateY(0px)">
+            <div class="about dec" id="">
+                <div class="about__avatar"></div>
+
+                <div class="about__info">
+                    <ul>
+                        <li>
+                            <p class="">
+                                CHAT <br />
+                                ONLINE-BERATER
+                            </p>
+                        </li>
+                        <li>
+                            <p class="bolt-f"><b>Sophia Müller</b></p>
+                        </li>
+                        <li>
+                            <p class="">
+                                Berater für Ernährung, Endokrinologie und
+                                Diätetik.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about__footer">
+                    <div class="item-btn">
+                        <div class="list">
+                            <div class="icon">
+                                <img src="images/Vector.png" alt="" />
+                            </div>
+                            <div class="tag">
+                                <h2>1900+</h2>
+                                <p>Patienten</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="icon">
+                                <img src="images/vector2.png" alt="" />
+                            </div>
+                            <div class="tag">
+                                <h2>10+ Vite</h2>
+                                <p>Erfahrung</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-text">
+                        <p>
+                            Berater für Ernährung, Endokrinologie und Diätetik.
+                        </p>
+                        <p>
+                            Internationaler Berater für Ernährung,
+                            Endokrinologie und Diätetik.
+                        </p>
+                        <p>Autor von über 20 Ernährungsbüchern.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <div class="header__body">
+                        <div class="header__name">
+                            <button
+                                class="show-b"
+                                type="button"
+                                value=""
+                                onmousedown=""
+                            >
+                                <div class="header__avatar">
+                                    <img
+                                        class="av1"
+                                        src="images/header-ava-eac-arb.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </button>
+                            <button
+                                class="none-btn"
+                                type="button"
+                                value=""
+                                onmousedown="viewDiv4()"
+                            >
+                                <div class="header__avatar">
+                                    <img
+                                        class="av1"
+                                        src="images/header-ava-eac-arb.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </button>
+
+                            <div class="header__desc">
+                                <p><span>Sophia Müller</span></p>
+                                <div class="online">
+                                    <img src="images/ellipse.png" alt="" />
+                                    <p>Online</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__online">
+                            <p>KOSTENLOSE BERATUNG</p>
+
+                            <button
+                                class="btn-show"
+                                type="button"
+                                value="Click"
+                                onmousedown="viewDiv()"
+                            >
+                                <img src="images/Groupbtn.png" alt="" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat" onmousedown="viewDiv3()">
+                    <div class="chat__time">
+                        <p>
+                            <script type="text/javascript">
+                                (s = new Date()),
+                                    (t = ('0' + s.getMinutes()).slice(-2));
+                                document.write(
+                                    'Heute, ' +
+                                        `${
+                                            ('0' + s.getHours()).slice(-2) +
+                                            ':' +
+                                            t
+                                        }`
+                                );
+                            </script>
+                        </p>
+                    </div>
+                    <div class="chat-content-list"></div>
+                    <button
+                        type="button"
+                        id="scroll_id"
+                        class="btn scroll-me hide aba"
+                        data-scroll="#down-box"
+                    >
+                        <span class="container-circle">
+                            <span class="button-circle down"></span>
+                        </span>
+                        <input
+                            type="text"
+                            class="inp"
+                            id="res"
+                            value="0"
+                            readonly=""
+                        />
+                    </button>
+
+                    <div id="form" class="iframe-form toform">
+                        <div id="order" class="boxit">
+                            <div id="order0" class="">
+                                <div class="spin-wrapper" id="spin-wrapper">
+                                    <div class="wheel-wrapper">
+                                        <div class="wheel">
+                                            <img
+                                                alt=""
+                                                class="wheel-img"
+                                                src="images/prizewheel.png"
+                                            />
+                                            <div class="wheel-cursor">
+                                                <img
+                                                    alt=""
+                                                    src="images/wheel-cursor.png"
+                                                /><span class="cursor-text">
+                                                    DREHEN</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="order_block"
+                                    id="mtc"
+                                    style="display: none"
+                                >
+                                    <div class="countdown-block" id="frm">
+                                        <div class="countdown-container">
+                                            <br />
+                                            <h3 class="redd lt70">
+                                                OFFIZIELLE BESTELLUNG VON
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="best-form">
+                                        <div class="wrap">
+                                            <style class="lt71">
+                                                .prod-price {
+                                                    display: flex;
+                                                    max-width: 300px;
+                                                    margin: 0 auto 20px;
+                                                    line-height: 1;
+                                                }
+
+                                                .pop-old-price {
+                                                    font-size: 24px;
+                                                    color: gray;
+                                                    text-decoration: line-through;
+                                                }
+
+                                                .pop-new-price {
+                                                    font-size: 32px;
+                                                    color: #544c4c;
+                                                    font-weight: bold;
+                                                    text-shadow: 0 0 4px #e3c72e;
+                                                }
+
+                                                .pop-price::before {
+                                                    position: absolute;
+                                                    left: 16px;
+                                                    top: -60px;
+                                                    content: ' ';
+                                                    background: url(images/50sale.png)
+                                                        no-repeat;
+                                                    width: 120px;
+                                                    height: 65px;
+                                                    background-size: 120px;
+                                                }
+
+                                                .price-bottom {
+                                                    position: absolute;
+                                                    width: 100%;
+                                                }
+
+                                                .pop-prod,
+                                                .pop-price {
+                                                    position: relative;
+                                                    flex: 1 50%;
+                                                    text-align: center;
+                                                    margin: auto;
+                                                }
+                                            </style>
+                                            <div class="prod-price">
+                                                <div class="pop-prod">
+                                                    <img
+                                                        src="images/prod.png"
+                                                        width="140"
+                                                    />
+                                                </div>
+                                                <div class="pop-price">
+                                                    <div class="price-bottom">
+                                                        <div
+                                                            class="pop-old-price price_old lt72 x_currency_old"
+                                                        >
+                                                            98€
+                                                        </div>
+                                                        <div
+                                                            class="pop-new-price price_main lt73 x_currency"
+                                                        >
+                                                            49€
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="wqddwa">ss</a>
+                                            <div>
+                                                <form
+                                                    action="send.php"
+                                                    class="order_form form_order"
+                                                    id="form"
+                                                    method="post"
+                                                >
+                                                    <select
+                                                        style="display: none"
+                                                        id="id_country"
+                                                        name="country"
+                                                        class="country_select country"
+                                                    >
+                                                        <option
+                                                            value="DE"
+                                                            selected=""
+                                                        >
+                                                            Germany
+                                                        </option>
+                                                    </select>
+                                            
+                                                    <div class="name-input">
+                                                        <input
+                                                            id = "fullName"
+                                                            type="text"
+                                                            name="name"
+                                                            placeholder="Ihr Name"
+                                                            class="set_required"
+                                                        />
+                                                    </div>
+                                                    <div class="phone-input">
+                                                        <input
+                                                            id ="phoneNumber" 
+                                                            type="tel"
+                                                            name="phone"
+                                                            placeholder="+49 12345678"
+                                                            required=""
+                                                        />
+                                                    </div>
+
+                                                    <button
+                                                        class="main-link"
+                                                        type="submit"
+                                                    >
+                                                        BESTELLEN SIE MIT 50%
+                                                        RABATT
+                                                        <span class="appear"
+                                                            >&gt;</span
+                                                        >
+                                                        <span class="appear"
+                                                            >&gt;</span
+                                                        >
+                                                        <span class="appear"
+                                                            >&gt;</span
+                                                        >
+                                                    </button>
+                                                    <div class="timelimit">
+                                                        Der Preisnachlass ist
+                                                        gültig:
+                                                        <b
+                                                            style="color: #f00"
+                                                            class="form-timer"
+                                                        >
+                                                            <span class="min"
+                                                                >60</span
+                                                            >
+                                                            :
+                                                            <span class="sec"
+                                                                >00</span
+                                                            >
+                                                        </b>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="spin-result-wrapper"
+                                style="display: none"
+                            >
+                                <div class="pop-up-window">
+                                    <div class="close-popup"></div>
+                                    <span class="pop-up-heading lt71">
+                                        Glückwunsch!</span
+                                    >
+                                    <p class="ruletka-p pop-up-text lt72">
+                                        Sie haben gerade 50% Rabatt auf «KETON
+                                        AKTIV» erhalten!
+                                    </p>
+                                    <button class="pop-up-button lt73">
+                                        OK
+                                    </button>
+                                </div>
+                            </div>
+                            <style>
+                                .order_block {
+                                    display: none;
+                                }
+                            </style>
+                            <style>
+                                .priceс br {
+                                    display: none;
+                                }
+                            </style>
+                        </div>
+                    </div>
+
+                    <div id="down-box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="show2" id="div1">
+            <div class="about2 dec2" id="">
+                <button
+                    class="btn-show close"
+                    type="button"
+                    value=""
+                    onmousedown="viewDiv2()"
+                >
+                    <img src="images/close_menu.png" alt="" />
+                </button>
+                <div class="about__avatar"></div>
+
+                <div class="about__info">
+                    <ul>
+                        <li>
+                            <p class="">
+                                CHAT <br />
+                                ONLINE-BERATER
+                            </p>
+                        </li>
+                        <li>
+                            <p class="bolt-f">
+                                <b
+                                    >Sophia <br />
+                                    Müller</b
+                                >
+                            </p>
+                        </li>
+                        <li>
+                            <p class="">
+                                Berater für Ernährung, Endokrinologie und
+                                Diätetik.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about__footer2">
+                <div class="item-btn">
+                    <div class="list2">
+                        <div class="icon">
+                            <img src="images/Vector.png" alt="" />
+                        </div>
+                        <div class="tag">
+                            <h2><b> 1900+</b></h2>
+                            <b>
+                                <p>Patienten</p>
+                            </b>
+                        </div>
+                        <b> </b>
+                    </div>
+                    <b>
+                        <div class="list2">
+                            <div class="icon">
+                                <img src="images/vector2.png" alt="" />
+                            </div>
+                            <div class="tag">
+                                <h2>10+ Vite</h2>
+                                <p>Erfahrung</p>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <b>
+                    <div class="item-text">
+                        <p>
+                            Berater für Ernährung, Endokrinologie und Diätetik.
+                        </p>
+
+                        <p>
+                            Internationaler Berater für Ernährung,
+                            Endokrinologie und Diätetik.
+                        </p>
+                        <p>Autor von über 20 Ernährungsbüchern.</p>
+                    </div>
+                    <div class="text-bot">
+                        <p class="">Alle Rechte vorbehalten</p>
+                    </div>
+                </b>
+            </div>
+            <b> </b>
+        </div>
+        <b>
+            <div class="alert">
+                <img src="images/prod.png" alt="#" class="alert__img" />
+                <span
+                    ><span class="alert__name"></span>
+                    <span class="alert__verb"></span>
+                    <span class="alert__count"></span> "KETON AKTIV"
+                    <span class="alert__city"></span
+                ></span>
+            </div>
+
+            <script src="js/script.js"></script>
+            <script src="js/spin.js"></script>
+            <script src="js/alert.js"></script>
+
+            <script></script>
+        </b>
+        <!-- FormValidator script -->
+        <script src="https://cdn.jsdelivr.net/gh/BblLLlKA/formValidator/dist/latest/formValidator.min.js"></script>
+        <script>const formValidator = new FormValidator('form', {
+            iti: {
+                initialCountry: 'de',
+                hiddenInput: 'fullPhone',
+                onlyCountries: ['de'],
+                utilsScript:
+                    'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js',
+            },
+        });
+        console.log(formValidator)
+        </script>
+        <script src="js/scroll.js"></script>
+    </body>
+</html>
